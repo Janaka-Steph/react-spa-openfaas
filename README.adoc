@@ -16,13 +16,10 @@ setting the `basename` property passed to the Router component.
 
 ## Step to Reproduce
 
-Go directly to https://openfaas-ingress-janaka-steph.cloud.okteto.net/function/react-spa/about
+Run OpenFaaS locally
 
-Or go to https://openfaas-ingress-janaka-steph.cloud.okteto.net/function/react-spa +
-Navigate to About +
-Refresh the page +
+ $ kubectl port-forward svc/gateway -n openfaas 8080:8080
 
+ $ faas-cli up
 
-## Open Question
-
-Can we deploy an SPA with the watchdog static mode without adding an Express server or Nginx?
+Go to `http://127.0.0.1:8080/function/react-spa/about` +

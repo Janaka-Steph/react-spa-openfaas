@@ -1,9 +1,9 @@
 version: 1.0
 provider:
   name: openfaas
-  gateway: https://openfaas-ingress-janaka-steph.cloud.okteto.net
+  gateway: http://127.0.0.1:8080
 functions:
   react-spa:
     lang: dockerfile
     handler: ./function
-    image: registry.cloud.okteto.net/janaka-steph/react-spa
+    image: janakasteph/react-spa
